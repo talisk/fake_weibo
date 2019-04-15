@@ -14,13 +14,9 @@ buildscript {
 
 rootProject.allprojects {
     repositories {
+        maven{url "http://maven.baidu-int.com/nexus/content/groups/public"}
         google()
         jcenter()
-
-        // weibo
-        maven {
-            url "https://dl.bintray.com/thelasterstar/maven/"
-        }
     }
 }
 
@@ -41,5 +37,5 @@ android {
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
 
-    implementation 'io.github.v7lin:weibo-android:4.3.4'
+    compile 'com.baidu.bdpass:sina-sso:4.3.6@aar'
 }
